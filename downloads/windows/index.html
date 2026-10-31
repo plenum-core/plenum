@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plenum wallet for Windows x64 — v0.1.0</title>
+<meta name="description" content="Download the Plenum Windows wallet v0.1.0: plenum-win-x64.zip, 213,178,812 bytes, SHA-256 9fa75ce4dedfb5c6072dd3651633b6bd38eca6c340c3ff78682777fe4ab2f18e. Unsigned, no network to sync.">
+<link rel="icon" href="../../plenum.ico" sizes="any">
+<link rel="icon" type="image/png" href="../../plenum-icon.png">
+<meta property="og:title" content="Plenum wallet for Windows x64 — v0.1.0">
+<meta property="og:description" content="Download the Plenum Windows wallet v0.1.0: plenum-win-x64.zip, 213,178,812 bytes, SHA-256 9fa75ce4dedfb5c6072dd3651633b6bd38eca6c340c3ff78682777fe4ab2f18e. Unsigned, no network to sync.">
+<meta property="og:image" content="https://plenum-core.github.io/plenum/plenum-banner.png">
+<style>
+:root{
+  --paper:#ece8dc; --paper2:#e2ddcd; --ink:#15181a; --muted:#63665c;
+  --rule:#c8c2b0; --lime:#6f8f1e; --lime-hot:#b7e04a; --white:#f6f4ec;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:16px/1.62 "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-image:radial-gradient(rgba(21,24,26,.05) 1px,transparent 1px);
+  background-size:4px 4px}
+a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--lime)}
+a:hover{background:rgba(183,224,74,.28)}
+.wrap{max-width:1060px;margin:0 auto;padding:0 28px}
+.mono{font-family:ui-monospace,"SFMono-Regular",Consolas,monospace}
+.serif{font-family:Georgia,"Times New Roman",serif}
+
+header.top{border-bottom:1px solid var(--ink);background:var(--paper)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;height:68px}
+.brand{display:flex;align-items:center;gap:11px;border:0}
+.brand img{width:30px;height:30px;display:block}
+.brand b{font:700 17px/1 Georgia,serif;letter-spacing:.16em}
+.brand span{font:11px/1 ui-monospace,monospace;color:var(--muted);letter-spacing:.14em}
+nav{display:flex;gap:22px;font:12px/1 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
+nav a{border:0;padding-bottom:3px}
+nav a.on{border-bottom:2px solid var(--lime)}
+nav a:hover{background:none;color:var(--lime)}
+
+.hero{padding:64px 0 40px;border-bottom:1px solid var(--rule)}
+.hero .kicker{font:11px/1 ui-monospace,monospace;letter-spacing:.22em;color:var(--lime);text-transform:uppercase;margin-bottom:20px}
+.hero h1{font:700 clamp(34px,5.6vw,62px)/1.03 Georgia,serif;margin:0 0 22px;letter-spacing:-.015em;max-width:19ch}
+.hero h1 em{font-style:italic;background:linear-gradient(transparent 62%,rgba(183,224,74,.75) 62%)}
+.hero p.lede{max-width:56ch;font-size:18px;color:#2c302c;margin:0}
+.duct{margin:34px 0 0}
+.duct svg{width:100%;height:auto;display:block}
+
+.band{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--rule)}
+.band div{padding:20px 22px 22px;border-right:1px solid var(--rule)}
+.band div:last-child{border-right:0}
+.band b{display:block;font:700 26px/1 Georgia,serif;margin-bottom:7px}
+.band span{font:10.5px/1.4 ui-monospace,monospace;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+
+section{padding:52px 0;border-bottom:1px solid var(--rule)}
+section:last-of-type{border-bottom:0}
+.grid{display:grid;grid-template-columns:150px 1fr;gap:34px}
+.grid>div{min-width:0}
+.slab{font:10.5px/1.5 ui-monospace,monospace;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
+.slab b{display:block;font:700 13px/1 ui-monospace,monospace;color:var(--lime);letter-spacing:.1em;margin-bottom:8px}
+h2{font:700 clamp(24px,3.2vw,34px)/1.14 Georgia,serif;margin:0 0 18px;letter-spacing:-.01em}
+h3{font:700 17px/1.3 Georgia,serif;margin:30px 0 8px}
+p{margin:0 0 14px;max-width:70ch}
+.small{font-size:14px;color:var(--muted)}
+ul.tight{margin:0 0 16px;padding-left:19px}
+ul.tight li{margin-bottom:7px;max-width:68ch}
+
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:6px 0 18px}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font:10.5px/1.4 ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--ink)}
+td.num{font-family:ui-monospace,monospace;white-space:nowrap}
+tr:last-child td{border-bottom:1px solid var(--ink)}
+
+pre{background:#171b1d;color:#dfe6d7;padding:16px 18px;overflow:auto;font:12.5px/1.65 ui-monospace,monospace;margin:0 0 18px;border-left:3px solid var(--lime-hot)}
+code{font-family:ui-monospace,monospace;font-size:.93em;background:rgba(21,24,26,.06);padding:1px 4px}
+pre code{background:none;padding:0}
+
+.card{border:1px solid var(--ink);padding:22px 24px;background:var(--white)}
+.card.warn{border-left:4px solid var(--lime-hot)}
+.note{font-size:14px;color:#3d423c;border-left:2px solid var(--lime);padding-left:14px;margin:18px 0}
+
+.btn{display:inline-block;border:1px solid var(--ink);background:var(--ink);color:var(--white);
+  font:12px/1 ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;padding:15px 22px;border-radius:0}
+.btn:hover{background:var(--lime-hot);color:var(--ink);border-color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:rgba(183,224,74,.35)}
+
+.hash{font:12.5px/1.7 ui-monospace,monospace;word-break:break-all;background:#171b1d;color:#e6ffa8;padding:14px 16px;display:block;margin:0 0 14px}
+
+.status{list-style:none;margin:0;padding:0}
+.status li{display:flex;gap:14px;padding:11px 0;border-bottom:1px dotted var(--rule);font-size:15px}
+.status li:last-child{border-bottom:0}
+.status .k{flex:0 0 190px;font:11px/1.9 ui-monospace,monospace;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+.status .no{color:#8a3f22}
+.status .yes{color:var(--lime)}
+
+footer{padding:40px 0 60px;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--ink);padding-top:22px}
+footer a{color:var(--muted)}
+
+.langrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:10px 0 26px}
+.langrid a{display:block;border:1px solid var(--ink);padding:18px;background:var(--white)}
+.langrid a:hover{background:rgba(183,224,74,.25)}
+.langrid b{display:block;font:700 16px/1.2 Georgia,serif;margin-bottom:6px}
+.langrid span{font:11px/1.5 ui-monospace,monospace;color:var(--muted)}
+
+.doctree{columns:2;column-gap:34px}
+.doctree a{display:block;padding:9px 0;border-bottom:1px dotted var(--rule);font-size:15px;break-inside:avoid}
+.doctree em{font-style:normal;color:var(--muted);font-size:12.5px;display:block}
+
+@media(max-width:860px){
+  table{display:block;width:100%;overflow-x:auto;border-bottom:1px solid var(--ink)}
+  section{padding:38px 0}
+  .band{grid-template-columns:repeat(2,1fr)}
+  .band div:nth-child(2){border-right:0}
+  .grid{grid-template-columns:1fr;gap:12px}
+  .doctree{columns:1}
+  .langrid{grid-template-columns:1fr}
+  header.top .wrap{height:auto;padding:14px 0;flex-wrap:wrap}
+  nav{gap:16px;flex-wrap:wrap}
+}
+@media(max-width:560px){
+  .band{grid-template-columns:1fr}
+  .band div{border-right:0;border-bottom:1px solid var(--rule)}
+  .band div:last-child{border-bottom:0}
+  .wrap{padding:0 20px}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../../"><img src="../../plenum-icon.png" alt=""><span><b>PLENUM</b><br><span>PLNM · KAWPOW</span></span></a>
+  <nav><a href="../../">overview</a><a href="../../downloads/" class="on">downloads</a><a href="../../explorer/">explorer</a><a href="../../docs/">documents</a></nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="kicker">Windows x64 · v0.1.0</div>
+    <h1>The wallet is real. The network it talks to is not.</h1>
+    <p class="lede">This build holds keys and prints them. It has nothing to synchronise against yet, and it is not signed, so the hash below is the only thing standing between you and a file you should not run.</p>
+  </div>
+
+  <section><div class="grid">
+    <div class="slab"><b>01</b>The file</div>
+    <div>
+      <table>
+        <tr><th>Item</th><th>Value</th></tr>
+        <tr><td>Archive</td><td class="num">plenum-win-x64.zip</td></tr>
+        <tr><td>Size</td><td class="num">213,178,812 bytes</td></tr>
+        <tr><td>Inside</td><td class="num">plenum-win-x64.exe · 213,178,642 bytes</td></tr>
+        <tr><td>Signature</td><td>none — unsigned build</td></tr>
+        <tr><td>Release</td><td><a href="https://github.com/plenum-core/plenum-wallet/releases/tag/v0.1.0">v0.1.0</a></td></tr>
+        <tr><td>SHA-256</td><td class="num">9fa75ce4dedfb5c6072dd3651633b6bd38eca6c340c3ff78682777fe4ab2f18e</td></tr>
+      </table>
+      <p><a class="btn" href="https://github.com/plenum-core/plenum-wallet/releases/download/v0.1.0/plenum-win-x64.zip" download>Download plenum-win-x64.zip</a></p>
+      <p class="small">The button downloads the archive directly from the release, without a detour through a GitHub page.</p>
+    </div>
+  </div></section>
+
+  <section><div class="grid">
+    <div class="slab"><b>02</b>Verification</div>
+    <div>
+      <h2>Check it before you run it.</h2>
+      <p>Open Command Prompt in the folder that holds the zip and run:</p>
+      <pre><code>certutil -hashfile plenum-win-x64.zip SHA256</code></pre>
+      <p>You should get exactly this line:</p>
+      <span class="hash">9fa75ce4dedfb5c6072dd3651633b6bd38eca6c340c3ff78682777fe4ab2f18e</span>
+      <p>If it differs by one character, delete the file. The same value is printed in the release notes, in <a href="../../CHANGELOG.md">CHANGELOG.md</a>, in <a href="../../WALLET.md">WALLET.md</a> and in the repository README — four independent places, so a page that has drifted is easy to spot.</p>
+      <p class="small">PowerShell equivalent: <code>Get-FileHash .\plenum-win-x64.zip -Algorithm SHA256</code>.</p>
+    </div>
+  </div></section>
+
+  <section><div class="grid">
+    <div class="slab"><b>03</b>Honest limits</div>
+    <div>
+      <h2>What this build will not do.</h2>
+      <ul class="tight">
+        <li>It will not show a balance or a transaction history — there is no chain.</li>
+        <li>It will not send coins, because there is nowhere to send them and nothing to pay a fee with.</li>
+        <li>It will not connect to a peer. Opening the network settings and finding nothing is expected.</li>
+        <li>It is not an investment product, and holding keys in it does not represent a claim on anything.</li>
+      </ul>
+      <div class="card warn">
+        <p style="margin:0"><b>Back up the keys yourself.</b> The wallet prints them; write them down on paper. A build without a network cannot help you recover anything, and there is no support desk to ask.</p>
+      </div>
+    </div>
+  </div></section>
+</main>
+<footer><div class="wrap">
+  <div>Plenum (PLNM) · KawPoW proof-of-work · no premine, no ICO, no fee</div>
+  <div><a href="https://github.com/plenum-core/plenum">source</a> · <a href="https://github.com/plenum-core/plenum-wallet">builds</a> · MIT licence</div>
+</div></footer>
+</body>
+</html>
